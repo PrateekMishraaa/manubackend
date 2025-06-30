@@ -22,8 +22,8 @@ mongoose.connect(process.env.MONGOURI)
 .then(() => {
     console.log('Connected with database')
 })
-.catch(() => {
-    console.log("disconnected with db")
+.catch((error) => {
+    console.log("disconnected with db",error)
 })
 
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`))
